@@ -1,0 +1,6 @@
+name = HTTP Client Manager
+description = "Manage Guzzle based HTTP Clients instances and configurations."
+core = 7.x
+package = Web services
+
+dependencies[] = xautoload

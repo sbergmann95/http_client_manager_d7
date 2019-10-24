@@ -1,0 +1,10 @@
+{
+    "name": "guzzle_http/guzzle_http",
+    "description": "Pull in the Guzzle Http library",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "guzzlehttp/guzzle-services": "^1.1",
+        "gimler/guzzle-description-loader": "^0.0.4"
+    }
+}

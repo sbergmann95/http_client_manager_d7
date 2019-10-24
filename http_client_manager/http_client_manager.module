@@ -1,0 +1,59 @@
+<?php
+
+require 'vendor/autoload.php';
+
+use \Drupal\http_client_manager\HttpClientManagerFactory;
+use \Drupal\http_client_manager\MockHttpClient;
+
+/**
+ * HttpClientManagerFactory global callback.
+ *
+ * @return \Drupal\http_client_manager\HttpClientManagerFactory
+ */
+function http_client_manager_service_factory() {
+  return new HttpClientManagerFactory();
+}
+
+/**
+ * MockHttpClient global callback.
+ *
+ * @param $responses
+ *
+ * @return \GuzzleHttp\Command\ServiceClient
+ */
+function http_client_manager_mock_http_client($responses) {
+  return MockHttpClient::getServiceClient($responses);
+}
+
+/**
+ * Implements hook_menu().
+ */
+function http_client_manager_menu() {
+  $items = [];
+
+  $items['admin/config/services/http-client-manager'] = [
+    'title' => 'HTTP Client Manager',
+    'description' => 'HTTP Client Manager',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => ['http_client_manager_overview_form'],
+    'access arguments' => ['administer guzzle http server settings'],
+    'file' => 'src/http_client_manager.admin.inc',
+  ];
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function http_client_manager_permission() {
+  $permissions = [
+    'administer guzzle http server settings' => [
+      'title' => t('Administer guzzle http server settings'),
+      'description' => t('Administer guzzle http server settings'),
+      'restrict access' => TRUE,
+    ],
+  ];
+
+  return $permissions;
+}
