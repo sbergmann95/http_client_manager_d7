@@ -8,7 +8,7 @@ CONTENTS OF THIS FILE
 
 INTRODUCTION
 ============
-  * The Guzzle Http module provides the ablity to use the Guzzle Http Client.
+  * The Http Client Manager module provides the ability to use the Guzzle Http Client.
   It also exposes hooks to define server and cert settings. It also provides
   an Admin UI for configuring the implemented server settings. It will also 
   provide environment settings (dev, staging, prod).
