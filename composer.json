@@ -1,5 +1,5 @@
 {
-    "name": "guzzle_http/guzzle_http",
+    "name": "http_client_manager/http_client_manager",
     "description": "Pull in the Guzzle Http library",
     "type": "library",
     "require": {

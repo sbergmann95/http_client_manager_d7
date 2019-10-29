@@ -16,7 +16,7 @@ INTRODUCTION
 
 REQUIREMENTS
 ============
-There are no module dependencies for guzzle_http.
+There are no module dependencies.
 
 INSTALLATION
 ============
