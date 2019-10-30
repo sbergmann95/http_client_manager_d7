@@ -16,7 +16,7 @@ INTRODUCTION
 
 REQUIREMENTS
 ============
-There are no module dependencies.
+Depends on xautoload.
 
 INSTALLATION
 ============
