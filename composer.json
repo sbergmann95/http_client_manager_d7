@@ -1,8 +1,18 @@
 {
     "name": "http_client_manager/http_client_manager",
-    "description": "Pull in the Guzzle Http library",
-    "type": "library",
+    "description": "Backport of the D8 HTTP Client Manager project",
+    "license": "GPL-2.0-or-later",
+    "type": "drupal-module",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/7"
+        }
+    ],
     "require": {
+        "drupal/xautoload": "^5.7",
         "guzzlehttp/guzzle": "^6.3",
         "guzzlehttp/guzzle-services": "^1.1",
         "gimler/guzzle-description-loader": "^0.0.4"
