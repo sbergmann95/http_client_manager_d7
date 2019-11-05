@@ -1,5 +1,5 @@
 {
-    "name": "http_client_manager/http_client_manager",
+    "name": "sbergmann95/http_client_manager_d7",
     "description": "Backport of the D8 HTTP Client Manager project",
     "license": "GPL-2.0-or-later",
     "type": "drupal-module",
